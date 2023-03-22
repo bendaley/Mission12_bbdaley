@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
+// populating my "teams" array with information on each team as provided in the assignment description pdf
 const teams = [
   {
     tid: 159,
@@ -4165,12 +4166,14 @@ const teams = [
   },
 ];
 
+// function to explain what the user is seeing on the web page
 function Welcome() {
   return (
     <h1>March Madness is upon us! Here is some info on the competing teams</h1>
   );
 }
 
+// team class used to return the school name, mascot name, & location
 class Team extends React.Component<{
   tid: number;
   cid: number;
@@ -4200,6 +4203,7 @@ class Team extends React.Component<{
   }
 }
 
+// function to map the oneTeam objects
 function TeamList() {
   return (
     <div>
@@ -4210,6 +4214,7 @@ function TeamList() {
   );
 }
 
+// app function used to call all the others
 function App() {
   return (
     <div>
@@ -4218,30 +4223,5 @@ function App() {
     </div>
   );
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1>Welcome to Ben's website</h1>
-
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(<App />, document.getElementById('mountNode'));
 
 export default App;
